@@ -14,14 +14,7 @@ Ensures logins are always done via SSL on a subdomain of the master domain, but 
 
 WordPress’ built-in `FORCE_SSL_LOGIN` and `FORCE_SSL_ADMIN` directives in `wp-config.php` work great, but are too restrictive in situations where you have custom domains — custom domains for which you cannot have SSL certificates. For sites on custom domains, we need to make sure that the login and admin access happens over the subdomain, which can be properly served over HTTPS.
 
-== Installation ==
-
-1. Set up custom domains, perhaps using [WPMU Domain Mapping](http://wordpress.org/extend/plugins/wordpress-mu-domain-mapping/).
-2. Configure your web server with your wildcard certificate for your master domain (for example `*.mynetwork.com`).
-3. Set `FORCE_SSL_LOGIN` to **ON** in `wp-config.php`.
-4. Upload `ssl-subdomain-for-multisite.php` to your `mu-plugins` folder.
-
-== What this Plugin does (incorporating Foolish Assumptions) ==
+= What this Plugin does (incorporating Foolish Assumptions) =
 
  > *or, a readme you **should** read before implementing this plugin on your site.*
  
@@ -49,7 +42,7 @@ We want all regular access to be:
 
 This plugin facilitates that — rewriting the `wp-login` (including logout) and `wp-admin` URLs to the first example, and rewriting all the others to the second style.
 
-== Foolish Assumptions ==
+= Foolish Assumptions =
 
 This plugin makes some (foolish) assumptions about your multisite network. You must make sure that these assumptions are true for your site, or you will find that this plugin may have unintended consequences and break things that are difficult to fix without manually disabling the plugin.
 
@@ -75,6 +68,13 @@ This plugin makes some (foolish) assumptions about your multisite network. You m
 4.	You have the `FORCE_SSL_LOGIN` setting in `wp-config.php` **ON**.
 		
 5.	You have the `FORCE_SSL_ADMIN` setting in `wp-config.php` **OFF**. We’ll handle that — WordPress’ forcing of SSL admins will conflict with this plugin.
+
+== Installation ==
+
+1. Set up custom domains, perhaps using [WPMU Domain Mapping](http://wordpress.org/extend/plugins/wordpress-mu-domain-mapping/).
+2. Configure your web server with your wildcard certificate for your master domain (for example `*.mynetwork.com`).
+3. Set `FORCE_SSL_LOGIN` to **ON** in `wp-config.php`.
+4. Upload `ssl-subdomain-for-multisite.php` to your `mu-plugins` folder.
 
 == Changelog ==
 
