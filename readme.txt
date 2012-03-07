@@ -22,7 +22,7 @@ This plugin filters the login, logout, home and admin URLs that WordPress uses t
 
 Why do we do this?
 
-= The Scenario =
+The Scenario
 
 We have a WordPress Multisite network. Let's call it `mynetwork.com`. We bought a fancy SSL wildcard certificate so we can offer `*.mynetwork.com` over a secure connection.
 
@@ -42,7 +42,7 @@ We want all regular access to be:
 
 This plugin facilitates that — rewriting the `wp-login` (including logout) and `wp-admin` URLs to the first example, and rewriting all the others to the second style.
 
-= Foolish Assumptions =
+Foolish Assumptions
 
 This plugin makes some (foolish) assumptions about your multisite network. You must make sure that these assumptions are true for your site, or you will find that this plugin may have unintended consequences and break things that are difficult to fix without manually disabling the plugin.
 
