@@ -28,7 +28,7 @@ We have a WordPress Multisite network. Let's call it `mynetwork.com`. We bought 
 
 We’d very much like to use this secure connection for all logins, and for all admin access.
 
-We also allow sites on this network to use a custom domain — like `demo-site.com`. We might be using [WPMU Domain Mapping](https://wordpress.org/extend/plugins/wordpress-mu-domain-mapping/) to achieve this. These sites have two domains, then — `demo-site.com` and `demo-site.mynetwork.com`.
+We also allow sites on this network to use a custom domain — like `demo-site.com`. We might be using [WPMU Domain Mapping](http://wordpress.org/extend/plugins/wordpress-mu-domain-mapping/) to achieve this. These sites have two domains, then — `demo-site.com` and `demo-site.mynetwork.com`.
 
 If we switch on `FORCE_SSL_LOGIN` or `FORCE_SSL_ADMIN`, we have a problem. When users go to `https://demo-site.com/wp-login.php`, they get a certificate error. We have a wildcard certificate for `*.mynetwork.com`, but we can’t possibly have a valid SSL certificate installed for every custom domain!
 
@@ -61,7 +61,7 @@ This plugin makes some (foolish) assumptions about your multisite network. You m
 				
 3.	Your site already has the custom domains working.
 		
-	*	I suggest the excellent [WPMU Domain Mapping](https://wordpress.org/extend/plugins/wordpress-mu-domain-mapping/) for this.
+	*	I suggest the excellent [WPMU Domain Mapping](http://wordpress.org/extend/plugins/wordpress-mu-domain-mapping/) for this.
 		
 		*	Your web server also needs to be [set up](http://www.lampjunkie.com/2008/05/how-to-set-up-a-wildcard-catch-all-virtual-host-in-apache/ "A tutorial on wildcard catch all hosting for Apache") to handle hosting a wildcard name virtual host. All of this is really part of the WPMU Domain Mapping set up, and not the set up for this plugin. I’m just, you know, mentioning it.
 			  
