@@ -4,7 +4,7 @@ Donate link:
 Tags: multisite, ssl, https, mu
 Requires at least: 3.3.1
 Tested up to: 3.3.1
-Stable tag: 1.0
+Stable tag: 1.1
 
 Ensures logins are always done via SSL on a subdomain of the master domain, but access to custom domains are always over HTTP, to avoid cert errors.
 
