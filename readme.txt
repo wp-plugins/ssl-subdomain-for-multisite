@@ -78,6 +78,11 @@ This plugin makes some (foolish) assumptions about your multisite network. You m
 
 == Changelog ==
 
+= 1.1 =
+
+* Fix a bug where the 'Dashboard' link on the Network Sites page would point to an incorrect domain in some installations of WordPress Multisit
+e. Thanks to Rob Mint.
+
 = 1.0 =
 * Initial release.
 
